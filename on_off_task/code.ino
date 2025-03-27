@@ -12,12 +12,13 @@ void setup()
 void loop()
 {
    if(digitalRead(pb)== HIGH){
-    if(toggleNumber == 1){
-       digitalWrite(led,0);
-    }else{
-       digitalWrite(led,1);
-      
-    }
+      if(toggleNumber == 1){
+         toggleNumber=0;
+         digitalWrite(led,toggleNumber);
+      }else{
+        toggleNumber=1;      
+        digitalWrite(led,toggleNumber);
+      }
    
   }   
 }
