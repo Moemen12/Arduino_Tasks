@@ -7,7 +7,8 @@ int inputPinThree = 3;
 int inputPinFour = 4;
 
 // Output Pins
-
+int outputPinNinth = 9;
+int outputPinTen = 10;
 int outputPinEleven = 11;
 int outputPinTwelve = 12;
 int outputPinThirteen = 13;
@@ -23,6 +24,8 @@ void setup()
   pinMode(inputPinThree,INPUT);
   pinMode(inputPinFour,INPUT);
   
+  pinMode(outputPinNinth,OUTPUT);
+  pinMode(outputPinTen,OUTPUT);
   pinMode(outputPinEleven,OUTPUT);
   pinMode(outputPinTwelve,OUTPUT);
   pinMode(outputPinThirteen,OUTPUT);
@@ -37,6 +40,8 @@ void loop()
      digitalRead(inputPinFour)== HIGH )
   {
     
+    digitalWrite(outputPinNinth,HIGH);
+    digitalWrite(outputPinTen,HIGH);
     digitalWrite(outputPinEleven,HIGH);
     digitalWrite(outputPinTwelve,HIGH);
     digitalWrite(outputPinThirteen,HIGH);
@@ -46,6 +51,8 @@ void loop()
   }
   
   else{
+    digitalWrite(outputPinNinth,LOW);
+    digitalWrite(outputPinTen,LOW);
     digitalWrite(outputPinEleven,LOW);
     digitalWrite(outputPinTwelve,LOW);
     digitalWrite(outputPinThirteen,LOW); 
